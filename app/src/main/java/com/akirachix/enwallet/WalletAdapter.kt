@@ -14,16 +14,17 @@ class WalletAdapter (var walletArticles: List<Cards>)
     }
 
     override fun onBindViewHolder(holder: WalletViewHolder, position: Int) {
-
+        holder.tvIn.text = walletArticles[position].toString()
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return walletArticles.size
     }
 }
 
 class WalletViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
     val tvIn = itemView.findViewById<TextView>(R.id.tvIn)
     val tvKes = itemView.findViewById<TextView>(R.id.tvKes)
+
 
 }
